@@ -1,0 +1,4 @@
+
+Subscription billing with Laravel Cashier for Mollie
+Laravel Cashier provides an expressive, fluent interface to subscriptions using Mollie's billing services.
+https://github.com/laravel/cashier-mollie

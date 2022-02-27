@@ -1,0 +1,14 @@
+https://laravel.com/docs/7.x/frontend
+
+While Laravel does not dictate which JavaScript or CSS pre-processors you use, it does provide a basic starting point using Bootstrap, React, and / or Vue that will be helpful for many applications. By default, Laravel uses NPM to install both of these frontend packages.
+
+
+Installing Node JS
+https://www.geeksforgeeks.org/installation-of-node-js-on-linux/
+https://hostadvice.com/how-to/how-to-install-node-js-on-ubuntu-18-04/
+
+  sudo apt install nodejs
+  sudo apt install npm
+
+  
+

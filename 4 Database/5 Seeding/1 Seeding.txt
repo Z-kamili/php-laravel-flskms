@@ -1,0 +1,3 @@
+Laravel includes a simple method of seeding your database with test data using seed classes.
+https://laravel.com/docs/7.x/seeding
+

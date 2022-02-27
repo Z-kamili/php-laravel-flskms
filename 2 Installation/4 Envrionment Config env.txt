@@ -1,0 +1,106 @@
+Basically, a .env file is an easy way to load custom configuration variables that your application needs without having to modify .htaccess files or Apache/nginx virtual hosts.
+https://github.com/vlucas/phpdotenv
+
+
+Laravel utilizes the DotEnv PHP library by Vance Lucas. In a fresh Laravel installation, the root directory of your application will contain a .env.example file. 
+https://laravel.com/docs/7.x/configuration
+
+Your .env file should not be committed to your application's source control, since each developer / server using your application could require a different environment configuration.
+
+  If you are developing with a team, you may wish to continue including a .env.example file with your application. By putting placeholder values in the example configuration file, other developers on your team can clearly see which environment variables are needed to run your application. You may also create a .env.testing file. This file will override the .env file when running PHPUnit tests or executing Artisan commands with the --env=testing option.
+
+
+
+1 Environment Variable Types
+  All variables in your .env files are parsed as strings, so some reserved values have been created to allow you to return a wider range of types from the env() function:
+
+  .env Value	env() Value
+  true	(bool) true
+  (true)	(bool) true
+  false	(bool) false
+  (false)	(bool) false
+  empty	(string) ''
+  (empty)	(string) ''
+  null	(null) null
+  (null)	(null) null
+
+
+  If you need to define an environment variable with a value that contains spaces, you may do so by enclosing the value in double quotes.
+
+  APP_NAME="My Application"
+
+
+2 Retrieving Environment configuration
+  All of the variables listed in this file will be loaded into the $_ENV PHP super-global when your application receives a request. However, you may use the env helper to retrieve values from these variables in your configuration files
+  'debug' => env('APP_DEBUG', false),
+
+3 Determining The Current environment
+  $environment = App::environment();
+
+  if (App::environment('local')) {
+      // The environment is local
+  }
+
+  if (App::environment(['local', 'staging'])) {
+      // The environment is either local OR staging...
+  }
+
+  4 Hiding Environment Variables From Debug Pages
+  https://laravel.com/docs/7.x/configuration#hiding-environment-variables-from-debug
+    You may do this by updating the debug_blacklist option in your config/app.php configuration file.
+    'debug_blacklist' => [
+        '_ENV' => [
+            'APP_KEY',
+            'DB_PASSWORD',
+        ],
+
+        '_SERVER' => [
+            'APP_KEY',
+            'DB_PASSWORD',
+        ],
+
+        '_POST' => [
+            'password',
+        ],
+    ],
+
+  5 Accessing Configuration values
+    You may easily access your configuration values using the global config helper function from anywhere in your application.
+    $value = config('app.timezone');
+    
+    To set configuration values at runtime, pass an array to the config helper:
+    config(['app.timezone' => 'America/Chicago']);
+
+
+6 Configuration Caching
+  To give your application a speed boost, you should cache all of your configuration files into a single file using the config:cache Artisan command.
+  https://laravel.com/docs/7.x/configuration#accessing-configuration-values
+
+7 Maintenance Mode
+  To enable maintenance mode, execute the down Artisan command:
+  php artisan down
+
+  php artisan down --message="Upgrading Database" --retry=60
+
+  To disable maintenance mode, use the up command:
+  php artisan up
+
+
+8 Maintenance Mode & Queues
+While your application is in maintenance mode, no queued jobs will be handled. The jobs will continue to be handled as normal once the application is out of maintenance mode.
+
+9 Alternatives To Maintenance Mode
+Since maintenance mode requires your application to have several seconds of downtime, consider alternatives like Envoyer to accomplish zero-downtime deployment with Laravel.
+
+
+Remove Public from URL
+
+  Step 1:- First of all, now you go to the public folder of your project. In it you will find a file of .htaccess name. You have to remove the file from there and take it out of the public folder.
+
+  Step 2:- Outside you will find a file of a server.php name. You have to change the name of that file. The name of that file is to delete server.php and keep index.php.
+
+  Step 3:- Now if you remove public from your url and run the project of laravel then your project will be open without public.
+  https://www.expertsphp.com/how-to-remove-public-from-url-in-laravel/
+  https://stackoverflow.com/questions/28364496/laravel-5-remove-public-from-url
+
+  

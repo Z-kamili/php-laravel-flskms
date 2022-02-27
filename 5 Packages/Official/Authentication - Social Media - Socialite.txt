@@ -1,0 +1,6 @@
+Socialite currently supports authentication with Facebook, Twitter, LinkedIn, Google, GitHub, GitLab and Bitbucket.
+https://laravel.com/docs/7.x/socialite
+
+
+How to remove the registration feature in Laravel authentication
+https://pawelmysior.com/how-to-remove-the-registration-feature-in-laravel-authentication

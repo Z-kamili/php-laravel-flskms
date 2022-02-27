@@ -1,0 +1,3 @@
+Horizon provides a beautiful dashboard and code-driven configuration for your Laravel powered Redis queues. Horizon allows you to easily monitor key metrics of your queue system such as job throughput, runtime, and job failures.
+https://laravel.com/docs/7.x/horizon
+

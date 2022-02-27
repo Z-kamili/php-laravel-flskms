@@ -1,0 +1,25 @@
+All of the configuration files for the Laravel framework are stored in the config directory. Each option is documented, so feel free to look through the files and get familiar with the options available to you.
+
+
+1 Public Directory
+After installing Laravel, you should configure your web server's document / web root to be the public directory. 
+
+2 Configuration Files
+Laravel framework are stored in the config directory.
+
+3 Directory Permissions
+After installing Laravel, you may need to configure some permissions. 
+Directories within the storage and the bootstrap/cache directories should be writable by your web server or Laravel will not run.
+
+4 Application Key
+> php artisan key:generate
+Typically, this string should be 32 characters long.
+If the application key is not set, your user sessions and other encrypted data will not be secure!
+
+5 Additional Configuration
+config/app.php
+  You may also want to configure a few additional components of Laravel, such as:
+  Cache
+  Database
+  Session
+

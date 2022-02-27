@@ -1,0 +1,42 @@
+Ref
+https://laravel.com/docs/7.x
+
+1 Server Requirements
+  Laravel Homestead virtual machine, so it's highly recommended that you use Homestead as your local Laravel development environment.
+  https://laravel.com/docs/7.x/homestead
+
+
+  However, if you are not using Homestead, you will need to make sure your server meets the following requirements:
+    PHP >= 7.2.5
+    BCMath PHP Extension
+    Ctype PHP Extension
+    Fileinfo PHP extension
+    JSON PHP Extension
+    Mbstring PHP Extension
+    OpenSSL PHP Extension
+    PDO PHP Extension
+    Tokenizer PHP Extension
+    XML PHP Extension
+
+
+2 Installing Laravel
+
+  1 Install Composer : foe downloading the dependencies
+  https://getcomposer.org/
+
+  2. Downloading larvel
+  >composer global require laravel/installer
+
+  3. Creating new Laravel Project
+  >laravel new blog
+
+  OR
+  Via Composer Create-Project
+  >composer create-project --prefer-dist laravel/laravel blog
+
+
+3 Local Development Server
+  >php artisan serve
+  This command will start a development server at http://localhost:8000:
+
+

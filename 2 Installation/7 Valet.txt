@@ -1,0 +1,2 @@
+Valet is a Laravel development environment for Mac minimalists. No Vagrant, no /etc/hosts file. You can even share your sites publicly using local tunnels. Yeah, we like it too.
+https://laravel.com/docs/7.x/valet

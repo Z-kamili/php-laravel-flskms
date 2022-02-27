@@ -1,0 +1,5 @@
+https://laravel.com/docs/7.x/migrations
+
+1 Introduction
+Migrations are like version control for your database, allowing your team to modify and share the application's database schema.
+
